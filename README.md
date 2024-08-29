@@ -23,10 +23,3 @@ Best regards,
 
 <hr>
 
-## ⚖️ License
-
-This project is licensed under the MIT License - see the <a href=''>LICENSE</a> file for details.
-
-<hr>
-
-<h3><img title="Sumanth-Konjeti" width="18" src="https://raw.githubusercontent.com/bcd-kushal/bcd-kushal/main/assets/icons/dark/filled/kushalkumar_bg_dark.png"/>&nbsp;Sumanth Konjeti 2024 • All rights reserved </h3>
