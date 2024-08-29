@@ -1,0 +1,18 @@
+---
+type WorkExperienceType = { company: string, duration: { from: string, till: string, totalDuration: string }, role: string }
+const workExperiences: WorkExperienceType[] = [
+    { company: "MyEdMaster, LLC",      duration: { from: "June 2024", till: "Present", totalDuration: "3mos" }, role: "Full-Stack ML Intern" },
+    { company: "[24]7.ai",    duration: { from: "Nov 2022", till: "May 2023", totalDuration: "7mos" }, role: "Data Engineer" },
+    { company: "[24]7.ai",  duration: { from: "Mar 2021", till: "Oct 2022", totalDuration: "19mos" }, role: "Software Development Engineer 1" },
+]
+---
+
+<div class="grid grid-cols-1 md:grid-rows-2 md:grid-cols-2 gap-x-14 gap-y-12 md:grid-flow-col items-start justify-start">
+    { workExperiences.map(({ company, duration: { from, till }, role }) => (
+        <div>
+            <h3 class="text-2xl">{role}</h3>
+            <h3 class="text-2xl">{company}</h3>
+            <span class="text-white/30 text-lg">{from} - {till}</span>
+        </div>
+    ))}
+</div>

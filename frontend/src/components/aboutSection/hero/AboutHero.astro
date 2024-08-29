@@ -1,0 +1,162 @@
+---
+import styles from './AboutHero.module.css';
+---
+
+<section id="hero" class="relative w-full h-screen flex flex-col justify-center items-center text-center bg-black">
+    <!-- Background SVG -->
+    <!-- Stars Background -->
+    <div class="absolute inset-0 stars-container">
+        <svg class="stars" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none">
+            <defs>
+                <radialGradient id="star" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                    <stop offset="0%" style="stop-color:rgba(255, 255, 255, 1);stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:rgba(255, 255, 255, 0);stop-opacity:0" />
+                </radialGradient>
+            </defs>
+            <circle cx="10%" cy="20%" r="0.5%" fill="url(#star)" />
+            <circle cx="40%" cy="50%" r="0.5%" fill="url(#star)" />
+            <circle cx="60%" cy="30%" r="0.5%" fill="url(#star)" />
+            <circle cx="80%" cy="70%" r="0.5%" fill="url(#star)" />
+            <circle cx="25%" cy="80%" r="0.3%" fill="url(#star)" />
+            <circle cx="90%" cy="10%" r="0.3%" fill="url(#star)" />
+            <circle cx="5%" cy="10%" r="0.3%" fill="url(#star)" />
+        </svg>
+    </div>
+    <div class="absolute inset-0 background-pattern"></div>
+    <!-- Hero Content -->
+    <div class="heroContent">
+        <h1 class={`text-6xl md:text-8xl font-bold text-white mb-4 ${styles.heroTitle}`}>
+            Sumanth Konjeti
+        </h1>
+        <h2 class={`text-2xl md:text-4xl font-light text-gray-300 mb-8 ${styles.heroSubtitle}`}>
+            Software Developer
+        </h2>
+        <a class={`flex items-center justify-center gap-2 text-xl text-gray-300 hover:text-white transition-all duration-300 ${styles.heroLink}`} href="/cv/Bala-Venkata-Naga-Srinivasa-Sumanth-Konjeti.pdf" download="Sumanth_Konjeti.pdf">
+            <p>Download CV</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"/>
+                <path d="m12 5 7 7-7 7"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- SVG Waves Background at the Bottom -->
+    <div class="absolute bottom-0 waves-container">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(100, 149, 237, 0.7)" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(72, 61, 139, 0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(75, 0, 130, 0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(255, 105, 180, 1)" />
+            </g>
+        </svg>
+    </div>
+</section>
+
+<style is:global>
+    /* Apply the waves background at the bottom */
+    .stars-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 20vh;
+        z-index: -2;
+        background-color: transparent;
+    }
+
+    .stars {
+        width: 100%;
+        height: 100%;
+    }
+
+    .waves-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 20vh;
+        z-index: -1;
+    }
+
+    /* Waves CSS */
+    .waves {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 25vh;
+        z-index: -1;
+    }
+
+    .parallax > use {
+        animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+    }
+
+    @keyframes move-forever {
+        0% {
+            transform: translate3d(-90px, 0, 0);
+        }
+        100% {
+            transform: translate3d(85px, 0, 0);
+        }
+    }
+
+    /* Hero Content Styling */
+    .heroContent {
+        z-index: 1;
+        color: white;
+        padding: 0 1rem;
+    }
+
+    .heroContent h1, .heroContent h2 {
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Responsive Design Adjustments */
+    @media (max-width: 768px) {
+        .heroContent h1 {
+            font-size: 4rem;
+        }
+
+        .heroContent h2 {
+            font-size: 2rem;
+        }
+
+        .waves-container {
+            height: 15vh;
+        }
+
+        .waves {
+            height: 15vh;
+        }
+
+        .stars-container {
+            height: 15vh;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .heroContent h1 {
+            font-size: 3rem;
+        }
+
+        .heroContent h2 {
+            font-size: 1.5rem;
+        }
+
+        .waves-container {
+            height: 10vh;
+        }
+
+        .waves {
+            height: 10vh;
+        }
+
+        .stars-container {
+            height: 10vh;
+        }
+    }
+</style>

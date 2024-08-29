@@ -1,0 +1,17 @@
+---
+type EducationType = { institute: string, duration: { from: string, till: string }, qualification: string, score?: string }
+const workExperiences: EducationType[] = [
+    { institute: "Indiana Univeristy Bloomington",  duration: { from: "2023", till: "present" }, qualification: "Masters in Computer Science", score: "3.73/4" },
+    { institute: "Amrita Vishwa Vidyapeetam, Coimbatore",  duration: { from: "2017", till: "2021" }, qualification: "Btech Computer Science", score: "8.2/10" },
+]
+---
+
+<div class="grid grid-cols-1 gap-x-14 gap-y-12 items-start justify-start">
+    { workExperiences.map(({ institute, duration: { from, till }, qualification, score }) => (
+        <div>
+            <span class="text-2xl">{qualification} {score}</span>
+            <h3 class="text-2xl">{institute}</h3>
+            <span class="text-white/30 text-lg">{from} - {till}</span>
+        </div>
+    ))}
+</div>

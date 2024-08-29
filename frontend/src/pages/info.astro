@@ -1,0 +1,307 @@
+---
+import type { PageType } from "../static/types/types";
+import Template from "../layouts/Template.astro";
+import CodingIcon from "../pages/AboutInfo/codingImg.astro"; // Assuming this is the image component
+const activeTab: PageType["active"] = "info";
+---
+
+<Template active={activeTab}>
+    <div class="about-page">
+        <!-- Header Section -->
+        <div class="header-section">
+            <h1>Sumanth Konjeti</h1>
+        </div>
+
+        <!-- About Me Section -->
+        <div class="about-me-section">
+            <div class="about-me-content">
+                <div class="text-content">
+                    <h2>About Me</h2>
+                    <p>Hola! I’m Sumanth Konjeti, a Full Stack Developer with a strong focus on Data Engineering and Machine Learning, currently pursuing a Master’s in Computer Science at Indiana University Bloomington.</p>
+
+<p>I began my career at [24]7.ai, solving backend challenges and developing messaging modules for clients like CapitalOne, Lenovo, and BestBuy. I led the ELK configuration for their platforms, ensuring peak performance during critical events.</p>
+
+<p>One of my key achievements was leading Performance Stress Rating (PSR) runs for our Assist chatbot server under peak conditions, earning company-wide recognition.</p>
+
+<p>Recently, as a Full-Stack ML Intern at MyEdMaster, LLC, I implemented vital features, enhanced security, and deployed ML models in SageMaker, solidifying my expertise in scalable, real-world applications.</p>
+
+<p>I’m passionate about bringing creativity and excellence to every project. Let’s connect and innovate together!</p>
+
+                </div>
+                <div class="image-content">
+                    <CodingIcon />
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <!-- <div class="projects-section">
+            <h3>Featured Projects</h3>
+            <div class="projects-gallery">
+                <div class="project">
+                    <h4>InstaInsight</h4>
+                    <p>A comprehensive Instagram-integrated tool using the MERN stack, Docker, and AWS, focused on real-time data analytics and enhancing user experience.</p>
+                </div>
+                <div class="project">
+                    <h4>Secure Banking Application</h4>
+                    <p>Developed a full-stack secure banking application using Angular.js, SpringBoot, and PostgreSQL, focusing on security and full-stack development.</p>
+                </div>
+                <div class="project">
+                    <h4>ASVINS</h4>
+                    <p>A patient insurance management system that streamlines insurance processes and enhances user accessibility.</p>
+                </div>
+            </div>
+            <div class="github-link">
+                <a href="https://github.com/sumanthkonjeti007" target="_blank" class="github-link">
+                    Explore More Projects on GitHub
+                </a>
+            </div>
+        </div> -->
+
+        <!-- Footer Section -->
+        <div class="footer-section">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <p>Email: <a href="mailto:bkonjeti@iu.edu">bkonjeti@iu.edu</a></p>
+                    <p>Work: <a href="mailto:bala.sumanthkonjeti05@gmail.com">bala.sumanthkonjeti05@gmail.com</a></p>
+                    <p>Location: Bloomington, Indiana</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Me</h4>
+                    <div class="social-links">
+                        <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon">Twitter</a>
+                        <a href="https://github.com/sumanthkonjeti007" target="_blank" class="social-icon">GitHub</a>
+                        <a href="https://www.linkedin.com/in/sumanth-konjeti-311673193/" target="_blank" class="social-icon">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>About This Site</h4>
+                    <p>Built with love and passion for coding. Feel free to explore and reach out if you have any questions or opportunities!</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sumanth Konjeti. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</Template>
+
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0; /* Light grey color for all text */
+}
+
+.about-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.header-section h1 {
+    font-size: 3em;
+    color: #ffffff; /* White color for the main header */
+    font-family: 'Poppins', sans-serif;
+}
+
+.svg-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.about-me-section {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative;
+    z-index: 1; /* To keep text above the SVG */
+}
+
+.about-me-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.text-content {
+    max-width: 60%;
+}
+
+.text-content h2 {
+    font-size: 2.5em;
+    color: #ffffff; /* White color for subheadings */
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    line-height: 1.8;
+    color: #e0e0e0; /* Light grey color for paragraphs */
+    margin-bottom: 20px;
+}
+
+.image-content {
+    max-width: 30%;
+    text-align: center;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.projects-section {
+    margin-top: 100px;
+    padding: 50px;
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.projects-section h3 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #ffffff; /* White color for section titles */
+    font-family: 'Poppins', sans-serif;
+}
+
+.projects-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project h4 {
+    font-size: 1.5em;
+    color: #ffffff; /* White color for project titles */
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1em;
+    color: #e0e0e0; /* Light grey color for project descriptions */
+}
+
+.github-link {
+    margin-top: 40px;
+    font-size: 1.2em;
+    color: #ffffff; /* White color for GitHub link */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.github-link:hover {
+    color: #cccccc; /* Slightly darker grey on hover */
+}
+
+.footer-section {
+    background-color: #1a1a1a;
+    padding: 40px 20px;
+    margin-top: 50px;
+    color: #e0e0e0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+}
+
+.footer-column h4 {
+    font-size: 1.5em;
+    color: #ffffff; /* White color for footer titles */
+    margin-bottom: 15px;
+}
+
+.footer-column p, .footer-column a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    color: #666666;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    color: #ffffff; /* White color for social icons */
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #cccccc; /* Slightly darker grey on hover */
+}
+
+@media (max-width: 1024px) {
+    .about-me-content {
+        flex-direction: column;
+    }
+
+    .text-content {
+        max-width: 100%;
+    }
+
+    .image-content {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .projects-gallery {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+</style>

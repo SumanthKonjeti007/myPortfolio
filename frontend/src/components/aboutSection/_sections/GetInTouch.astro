@@ -1,0 +1,20 @@
+---
+import { SUMANTH_EMAIL_DEFAULT, SUMANTH_WHATSAPP, SUMANTH_LINKEDIN, SUMANTH_INSTAGRAM, SUMANTH_GITHUB } from "../../../static/constants/socials"
+
+const contactDetails: { title: string, subtitle?: string, link: string, seoTitle: string }[] = [
+    { title: "Email", subtitle: SUMANTH_EMAIL_DEFAULT, link: `mailto:${SUMANTH_EMAIL_DEFAULT}`, seoTitle: SUMANTH_EMAIL_DEFAULT },
+    { title: "Whatsapp", subtitle: "+1 (812) 6680088", link: SUMANTH_WHATSAPP, seoTitle: "+1 (812) 6680088" },
+    { title: "LinkedIn", subtitle: "", link: SUMANTH_LINKEDIN, seoTitle: "@dev-sumanth" },
+    { title: "GitHub", subtitle: "", link: SUMANTH_GITHUB, seoTitle: "@bcd-kushal" },
+    { title: "Instagram", subtitle: "", link: SUMANTH_INSTAGRAM, seoTitle: "@dev-sumanth" },
+]
+---
+
+<div class="grid grid-cols-[auto] md:grid-rows-6 md:grid-cols-[280px_1fr] gap-x-24 gap-y-12 md:gap-y-[34px] md:grid-flow-col items-start justify-start">
+    { contactDetails.map(({ title, subtitle, link, seoTitle }, index ) => (
+        <a href={link} title={`${title}: ${seoTitle}`} target="_blank" class={index < 2 ? `md:row-span-3 ${index === 1 ? "md:self-end" : ""}` : `md:row-span-2 ${index === 4 ? "md:self-end" : index === 3 ? "md:self-center" : ""}`} rel="noopener noreferrer">
+            <h3 class="text-2xl">{title}</h3> 
+            { subtitle ? <span class="text-white/30 text-lg">{subtitle}</span> : <></> }
+        </a>
+    ))}
+</div>

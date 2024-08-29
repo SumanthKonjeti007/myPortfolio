@@ -1,0 +1,1 @@
+export type PageType = ({ active: "about" | "info" | "work" | "blog" } | { active: "blog-article", blogArticle: string })
