@@ -15,11 +15,11 @@
 
 This portfolio showcases a selection of my projects, skills, and experiences tailored as a dedicated and skilled developer
 
-<table>
+<!-- <table>
   <tr><td>🌐 Main website</td><td>https://kushalkumarsaha.com</td></tr>
   <tr><td>🤝 Services</td><td>https://services.kushalkumarsaha.com</td></tr>
   <tr><td>📑 Blogs</td><td>https://kushalkumarsaha.com/blogs</td></tr>
-</table> 
+</table>  -->
 
 ## :speech_balloon: Let's Connect
 
